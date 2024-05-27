@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
+import ToggleBtn from './ToggleBtn'
 import { Link } from 'react-router-dom'
 
 const Container = styled.div`
@@ -10,27 +11,9 @@ const Container = styled.div`
   color: ${({ theme }) => theme.text};
 `
 
-const ToggleButton = styled.button`
-  background: ${({ theme }) => theme.background};
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  padding: 8px;
-  color: ${({ theme }) => theme.text};
-  font-weight: bold;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: ${({ theme }) => theme.text}; 
-    color: ${({ theme }) => theme.background}; 
-  }
-`
-
 const Title = styled.h2`
     font-size: 1.5rem;
     color: #1e30f3;
-    
 `
 
 const Nav = styled.ul`
@@ -55,11 +38,11 @@ const NavLink = styled(Link)`
 `
 
 interface HeaderProps {
-  toggleTheme: () => void
+  toggleTheme: () => void;
+  theme: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
-
+const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
   return (
     <Container>
       <Title>Gabriel Silva</Title>
@@ -68,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
           <NavLink to="/">Home</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/projetos">Habilidades</NavLink>
+          <NavLink to="/sobre">Sobre</NavLink>
         </NavItem>
         <NavItem>
           <NavLink to="/contato">Projetos</NavLink>
@@ -77,7 +60,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
           <NavLink to="/habilidades">Contato</NavLink>
         </NavItem>
       </Nav>
-      <ToggleButton onClick={toggleTheme}></ToggleButton>
+      <ToggleBtn theme={theme} toggleTheme={toggleTheme} />
     </Container>
   )
 }
