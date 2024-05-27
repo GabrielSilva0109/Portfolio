@@ -4,16 +4,12 @@ import Home from './components/Home/Home'
 
 const AppRouter: React.FC = () => {
     return (
-        <>
-         <Router>
-        <Routes>
-            <Route path="/" element={<Home />} />
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
             
-        </Routes>
-
-     </Router>
-         
-        </>
+            </Routes>
+        </Router>
     )
 }
 
