@@ -3,9 +3,8 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 1rem;
   background-color: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text};
   border-bottom: 1px solid ${({ theme }) => theme.toggleBorder};
