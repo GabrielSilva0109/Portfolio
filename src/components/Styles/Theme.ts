@@ -1,7 +1,7 @@
 import { DefaultTheme } from 'styled-components'
 
 export const lightTheme: DefaultTheme = {
-  body: '#FFF',
+  body: '#ebebeb',
   text: '#000',
   toggleBorder: '#FFF',
   background: '#363537',

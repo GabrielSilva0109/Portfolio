@@ -16,7 +16,7 @@ const Button = styled.button`
     background: ${({ theme }) => theme.text};
     color: ${({ theme }) => theme.background};
   }
-`;
+`
 
 interface ToggleBtnProps {
   theme: string;
