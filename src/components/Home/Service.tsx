@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Slides, Slide } from 'react-slides';
-import 'react-slides/lib/styles.css'; // Importando estilos da biblioteca
 
 import web from '../../IMG/iconsWeb.png';
 import back from '../../IMG/iconsBack.png';
@@ -33,14 +31,20 @@ const Title = styled.h1`
 
 const SubTitle = styled.h3`
   margin-top: -20px;
-`;
+`
+
+const Boxes = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
 const Box = styled.div`
   width: 300px;
   height: 400px;
   border-radius: 20px;
   padding: 10px;
-`;
+`
 
 const TopBox = styled.div`
   display: flex;
@@ -76,8 +80,7 @@ const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
         <Title>SERVIÇOS</Title>
         <SubTitle>Transformando ideias em realidade digital</SubTitle>
         
-        <Slides>
-          <Slide>
+          <Boxes>
             <Box>
               <TopBox>
                 <Icon src={web}/>
@@ -90,8 +93,7 @@ const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
                 <ItemList>Integração com APIs externas</ItemList>
               </List>
             </Box>
-          </Slide>
-          <Slide>
+          
             <Box>
               <TopBox>
                 <Icon src={back}/>
@@ -104,8 +106,7 @@ const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
                 <ItemList>Otimização de performance</ItemList>
               </List>
             </Box>
-          </Slide>
-          <Slide>
+          
             <Box>
               <TopBox>
                 <Icon src={db}/>
@@ -118,8 +119,7 @@ const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
                 <ItemList>Otimização de consultas e índices</ItemList>
               </List>
             </Box>
-          </Slide>
-        </Slides>
+          </Boxes>
       </Container>
     </div>
   );
