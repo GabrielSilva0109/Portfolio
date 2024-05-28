@@ -2,7 +2,8 @@ import React from 'react'
 import Header from '../Header/Header'
 import styled from 'styled-components'
 import perfil from '../../IMG/perfil.jpg'
-
+import { Link } from 'react-router-dom'
+import Service from './Service'
 
 interface HomeProps {
   toggleTheme: () => void;
@@ -14,7 +15,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 15px;
-  height: 450px;
+  height: 500px;
+  margin-bottom: 50px;
 
   @media(max-width: 768px){
     flex-direction: column;
@@ -26,15 +28,17 @@ const LeftContainer = styled.div`
   float: left;
 
   @media(max-width: 768px){
-    width: 80%;
+    width: 90%;
   }
 `
 
 const RightContainer = styled.div`
   width: 35%;
-  float: right;
+  float: right; 
 
-  
+  @media(max-width: 768px){
+    display: none;
+  }
 `
 
 const Title = styled.h1`
@@ -43,7 +47,9 @@ const Title = styled.h1`
   color: transparent;
   font-size: 48px;
   font-weight: bold;
+  font-family: inherit;
 `
+
 const SubTitle = styled.h3`
   margin-top: -40px;
 
@@ -56,24 +62,55 @@ const SubTitle = styled.h3`
     -webkit-background-clip: text;
     color: transparent;
   }
-`
-
-
-const Span = styled.h3`
-
+  @media(max-width: 768px){
+    margin-top: -35px;
+  }
 `
 
 const Text = styled.p`
 
 `
 
-const Btns = styled.div`
-
-`
-
 const Img = styled.img`
   width: 80%;
   border-radius: 40%;
+  margin:
+
+
+`
+
+const Btns = styled.div`
+  display: flex;
+  gap: 10px;
+`
+
+const BtnContato = styled.button`
+  width: 150px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: black;
+  border: none;
+`
+
+const BtnCV = styled.a`
+  width: 150px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #d7d7d7;
+  border: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none; 
+  cursor: pointer; 
+`
+
+const ToLink = styled(Link)`
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
 `
 
 const Home: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
@@ -85,14 +122,24 @@ const Home: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
           <Title>Fullstack Developer</Title>
           <SubTitle>Desenvolvendo o futuro digital com <span>Inovação</span>, <span>Criatividade</span> e <span>Código refinado</span>.</SubTitle>
           <Text></Text>
-          <Btns></Btns>
+          <Btns>
+            <BtnContato>
+              <ToLink to="/contato">Contato</ToLink>
+            </BtnContato>
+            <BtnCV href="../../IMG/GabrielSilva.pdf" download>
+              Curriculo
+            </BtnCV>
+          </Btns>
         </LeftContainer>
         <RightContainer>
             <Img src={perfil}/>
         </RightContainer>
       </Container>
+      <Service toggleTheme={function (): void {
+        throw new Error('Function not implemented.')
+      } } theme={''} />
     </div>
   )
 }
 
-export default Home;
+export default Home

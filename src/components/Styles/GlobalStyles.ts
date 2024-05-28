@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-    font-family: 'Poppins', Arial, Roboto, sans-serif;
+    font-family: inherit, Arial, Roboto, sans-serif;
     font-weight: 400;
     transition: all 0.50s linear;
   }

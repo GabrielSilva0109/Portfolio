@@ -9,18 +9,22 @@ const Container = styled.div`
   align-items: center;
   background-color: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text};
+  padding: 10px 20px;
 `
 
 const Title = styled.h2`
+  background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
+  -webkit-background-clip: text;
+  color: transparent;
   font-size: 1.5rem;
-  color: #1e30f3;
-`;
+  font-weight: bold;
+`
 
 const Nav = styled.ul`
   display: flex;
   list-style: none;
 
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     display: none;
   }
 `
@@ -34,10 +38,12 @@ const NavLink = styled(Link)`
   font-size: 1.1rem;
   font-weight: bold;
   color: ${({ theme }) => theme.text};
-  transition: .5s;
+  transition: 0.5s;
 
   &:hover {
-    color: #1e30f3;
+    background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
+    -webkit-background-clip: text;
+    color: transparent;
   }
 `
 
@@ -51,6 +57,42 @@ const MenuIcon = styled.div`
   }
 `
 
+const MobileMenu = styled.div<{ show: boolean }>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 60px; /* Ajuste conforme necessário */
+  left: 0;
+  width: 100%;
+  background-color: ${({ theme }) => theme.body};
+  z-index: 10;
+  max-height: ${({ show }) => (show ? '300px' : '0')};
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+`
+
+const MobileNavItem = styled.div`
+  margin: 10px 0;
+`
+
+const MobileNavLink = styled(Link)`
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: ${({ theme }) => theme.text};
+  transition: 0.5s;
+
+  &:hover {
+    color: #1e30f3;
+  }
+`
+
+const DesktopToggleBtnContainer = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
 
 interface HeaderProps {
   toggleTheme: () => void;
@@ -58,35 +100,50 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
-  const [showModal, setShowModal] = useState(false);
+  const [showMenu, setShowMenu] = useState(false)
 
-  const toggleModal = () => {
-    setShowModal(!showModal);
-  };
+  const toggleMenu = () => {
+    setShowMenu(!showMenu)
+  }
 
   return (
     <Container>
       <Title>Gabriel Silva</Title>
-      <MenuIcon onClick={toggleModal}>
+      <MenuIcon onClick={toggleMenu}>
         ☰
       </MenuIcon>
-      
-        <Nav>
-          <NavItem>
-            <NavLink to="/" onClick={toggleModal}>Home</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/sobre" onClick={toggleModal}>Sobre</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/contato" onClick={toggleModal}>Projetos</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/habilidades" onClick={toggleModal}>Contato</NavLink>
-          </NavItem>
-        </Nav>
-      
-      <ToggleBtn theme={theme} toggleTheme={toggleTheme} />
+      <Nav>
+        <NavItem>
+          <NavLink to="/">Home</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/sobre">Sobre</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/projetos">Projetos</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/contato">Contato</NavLink>
+        </NavItem>
+      </Nav>
+      <DesktopToggleBtnContainer>
+        <ToggleBtn theme={theme} toggleTheme={toggleTheme} />
+      </DesktopToggleBtnContainer>
+      <MobileMenu show={showMenu}>
+        <MobileNavItem>
+          <MobileNavLink to="/" onClick={toggleMenu}>Home</MobileNavLink>
+        </MobileNavItem>
+        <MobileNavItem>
+          <MobileNavLink to="/sobre" onClick={toggleMenu}>Sobre</MobileNavLink>
+        </MobileNavItem>
+        <MobileNavItem>
+          <MobileNavLink to="/projetos" onClick={toggleMenu}>Projetos</MobileNavLink>
+        </MobileNavItem>
+        <MobileNavItem>
+          <MobileNavLink to="/contato" onClick={toggleMenu}>Contato</MobileNavLink>
+        </MobileNavItem>
+        <ToggleBtn theme={theme} toggleTheme={toggleTheme} />
+      </MobileMenu>
     </Container>
   )
 }
