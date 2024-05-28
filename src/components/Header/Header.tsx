@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import ToggleBtn from './ToggleBtn';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import ToggleBtn from './ToggleBtn'
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
   display: flex;

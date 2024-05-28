@@ -24,7 +24,7 @@ const Container = styled.div`
 `
 
 const LeftContainer = styled.div`
-  width: 35%;
+  width: 38%;
   float: left;
 
   @media(max-width: 768px){

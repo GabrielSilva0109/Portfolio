@@ -17,8 +17,8 @@ const Container = styled.div`
   padding: 15px;
   flex-direction: column;
   gap: 40px;
-  margin: 120px;
-`;
+  margin-top: 120px ;
+`
 
 const Title = styled.h1`
   background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
