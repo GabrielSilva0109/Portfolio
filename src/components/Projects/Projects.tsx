@@ -28,15 +28,18 @@ const Title = styled.h1`
     font-size: 1.5rem;
     font-weight: bold;
     font-family: inherit;
-
 `
 
 const Project = styled.div`
   display: flex;
-  
   justify-content: center;
   width: 100%;
   gap: 10px;
+
+  @media(max-width: 768px){
+    flex-direction: column;    
+}
+
 `
 
 const Left = styled.div`
@@ -44,13 +47,21 @@ const Left = styled.div`
    float: left;
    background: gray;
    height: 300px;
+
+   
+  @media(max-width: 768px){
+    width:100%;    
+}
 `
 
 const Right = styled.div`
-width: 40%;
-float: left;
-background: black;
-height: 300px;
+    width: 40%;
+    float: left;
+    background: black;
+    height: 300px;
+    @media(max-width: 768px){
+        width:100%;
+    }
 `
   
 const Projects: React.FC<ProjectsProps> = ({ toggleTheme, theme }) => {
