@@ -14,33 +14,43 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 15px;
-  height: 500px;
   margin-bottom: 50px;
   flex-direction: column;
-
+    gap: 20px;
   @media(max-width: 768px){
   }
 `
 
 const Title = styled.h1`
+    background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: inherit;
 
 `
 
 const Project = styled.div`
   display: flex;
-  height: 300px;
+  
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
 `
 
 const Left = styled.div`
    width: 40%;
    float: left;
    background: gray;
+   height: 300px;
 `
 
 const Right = styled.div`
 width: 40%;
 float: left;
 background: black;
+height: 300px;
 `
   
 const Projects: React.FC<ProjectsProps> = ({ toggleTheme, theme }) => {
@@ -51,13 +61,35 @@ const Projects: React.FC<ProjectsProps> = ({ toggleTheme, theme }) => {
             <Title>Projetos</Title>
             <Project>
 
-            <Left>
-                siela
-            </Left>
+                <Left>
+                    siela
+                </Left>
 
-            <Right>
-diretira
-            </Right>
+                <Right>
+                    diretira
+                </Right>
+            </Project>
+
+            <Project>
+
+                <Left>
+                    siela
+                </Left>
+
+                <Right>
+                    diretira
+                </Right>
+            </Project>
+
+            <Project>
+
+                <Left>
+                    siela
+                </Left>
+
+                <Right>
+                    diretira
+                </Right>
             </Project>
          </Container>
         </>
