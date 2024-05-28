@@ -23,3 +23,4 @@ declare module '*.jpg' {
     export default value;
   }
   
+  declare module 'react-slides'
