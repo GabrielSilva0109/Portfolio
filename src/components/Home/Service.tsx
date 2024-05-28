@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import web from '../../IMG/iconsWeb.png'
+import back from '../../IMG/iconsBack.png'
+import db from '../../IMG/iconsDB.png'
 
 interface HomeProps {
   toggleTheme: () => void;
@@ -13,9 +16,8 @@ const Container = styled.div`
   padding: 15px;
   height: 450px;
   flex-direction: column;
-  @media(max-width: 768px){
-    flex-direction: column;
-  }
+  gap: 40px;
+  margin: 120px;
 `
 
 const Title = styled.h1`
@@ -28,7 +30,7 @@ const Title = styled.h1`
 `
 
 const SubTitle = styled.h3`
-  margin-top: -5px;
+  margin-top: -20px;
 `
 
 const Boxes = styled.div`
@@ -39,28 +41,37 @@ const Boxes = styled.div`
 `
 
 const Box = styled.div`
-    background: #d7d7d7;
     width: 300px;
     height: 400px;
     border-radius: 20px;
     padding: 10px;
 `
 
+const TopBox = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+`
 const Text = styled.div`
   font-weight: bold;
   text-align: justify;
-  color: #414141;
+  color: #696969;
 `
 
 const List = styled.ul`
-  
+  padding: 0px 0px;
+  list-style: none;
 `
 
 const ItemList = styled.li`
   font-weight: bold;
   padding: 5px 0;
+  font-size: 0.95rem;
 `
 
+const Icon = styled.img`
+  width: 50px;
+`
 
 const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
   return (
@@ -71,6 +82,9 @@ const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
         
         <Boxes>
             <Box>
+                <TopBox>
+                    <Icon src={web}/>
+                </TopBox>
                 <Title>Desenvolvimento Web</Title>
                 <Text> Desenvolvimento de sites e aplicações web utilizando tecnologias modernas como React.js, Angular, Vue.js, Node.js, entre outras.</Text>
                 <List>
@@ -80,6 +94,9 @@ const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
                 </List>
             </Box>
             <Box>
+                <TopBox>
+                    <Icon src={back}/>
+                </TopBox>
                 <Title>APIs e Backend</Title>
                 <Text> Construção de APIs robustas e escaláveis utilizando frameworks como Express.js, Django, Spring Boot, entre outros.</Text>
                 <List>
@@ -89,6 +106,9 @@ const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
                 </List>
             </Box>
             <Box>
+                <TopBox>
+                    <Icon src={db}/>
+                </TopBox>
                 <Title>Banco de Dados</Title>
                 <Text>Modelagem, implementação e otimização de bancos de dados relacionais e não relacionais como 
                     MySQL, PostgreSQL, entre outros.

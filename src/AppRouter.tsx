@@ -15,7 +15,7 @@ const AppRouter: React.FC<AppRouterProps> = ({ toggleTheme }) => {
         <Route path="/sobre" element={<About toggleTheme={toggleTheme} theme="Light" />} />
       </Routes>
     </Router>
-  );
+  )
 }
 
-export default AppRouter;
+export default AppRouter
