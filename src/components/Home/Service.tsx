@@ -37,6 +37,7 @@ const Boxes = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 40px;
 `
 
 const Box = styled.div`
