@@ -1,6 +1,8 @@
 import React from 'react'
 import Header from '../Header/Header'
-import styled from 'styled-components';
+import styled from 'styled-components'
+import perfil from './perfil.jpg'
+
 
 interface HomeProps {
   toggleTheme: () => void;
@@ -12,10 +14,11 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 15px;
+  height: 450px;
 `
 
 const LeftContainer = styled.div`
-  width: 50%;
+  width: 35%;
   float: left;
 `
 
@@ -25,11 +28,15 @@ const RightContainer = styled.div`
 `
 
 const Title = styled.h1`
-
+  background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 48px;
+  font-weight: bold;
 `
-const SubTitle = styled.h3`
-  margin-top: -50px;
 
+const SubTitle = styled.h3`
+  margin-top: -40px;
 `
 
 const Text = styled.p`
@@ -40,6 +47,10 @@ const Btns = styled.div`
 
 `
 
+const Img = styled.img`
+
+`
+
 const Home: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
   return (
     <div>
@@ -47,7 +58,7 @@ const Home: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
       <Container>
         <LeftContainer>
           <Title>Fullstack Developer</Title>
-          <SubTitle>Desenvolvendo o futuro digital com inovação, criatividade e código refinado.</SubTitle>
+          <SubTitle>Desenvolvendo o futuro digital com inovação,  criatividade e código refinado.</SubTitle>
           <Text></Text>
           <Btns></Btns>
         </LeftContainer>
