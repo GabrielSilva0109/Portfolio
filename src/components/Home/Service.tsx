@@ -27,7 +27,7 @@ const Title = styled.h1`
   font-size: 1.3rem;
   font-weight: bold;
   font-family: inherit;
-`;
+`
 
 const SubTitle = styled.h3`
   margin-top: -20px;

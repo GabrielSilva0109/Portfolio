@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import ToggleBtn from './ToggleBtn'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Container = styled.div`
   display: flex;
@@ -33,18 +33,36 @@ const NavItem = styled.li`
   margin: 0 10px;
 `
 
-const NavLink = styled(Link)`
+const NavLink = styled(Link)<{ isActive: boolean }>`
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: ${({ theme }) => theme.text};
   transition: 0.5s;
+  position: relative;
 
   &:hover {
     background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
     -webkit-background-clip: text;
     color: transparent;
   }
+
+  ${({ isActive, theme }) =>
+    isActive &&
+    `
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
+      border-radius: 10px;
+      position: absolute;
+      bottom: -2px;
+      transition: 0.5s;
+      left: 0;
+    }
+  `}
 `
 
 const MenuIcon = styled.div`
@@ -101,6 +119,8 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
   const [showMenu, setShowMenu] = useState(false)
+  const location = useLocation()
+  const isActiveLink = (pathname: string, currentPath: string) => pathname === currentPath
 
   const toggleMenu = () => {
     setShowMenu(!showMenu)
@@ -114,16 +134,16 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, theme }) => {
       </MenuIcon>
       <Nav>
         <NavItem>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/" isActive={isActiveLink('/', location.pathname)}>Home</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/sobre">Sobre</NavLink>
+          <NavLink to="/sobre" isActive={isActiveLink('/sobre', location.pathname)}>Sobre</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/projetos">Projetos</NavLink>
+          <NavLink to="/projetos" isActive={isActiveLink('/projetos', location.pathname)}>Projetos</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/contato">Contato</NavLink>
+          <NavLink to="/contato" isActive={isActiveLink('/contato', location.pathname)}>Contato</NavLink>
         </NavItem>
       </Nav>
       <DesktopToggleBtnContainer>
