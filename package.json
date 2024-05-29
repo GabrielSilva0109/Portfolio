@@ -19,6 +19,7 @@
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "react-slides": "^1.0.1",
+    "react-toastify": "^10.0.5",
     "style-components": "^0.1.0",
     "styled-components": "^6.1.11",
     "typescript": "^4.9.5",

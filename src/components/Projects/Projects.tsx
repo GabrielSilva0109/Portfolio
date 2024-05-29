@@ -1,6 +1,8 @@
 import React from  'react'
 import styled from 'styled-components'
 import Header from '../Header/Header'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 //Projetos
 import psi from '../../IMG/Projects/psi.jpg'
