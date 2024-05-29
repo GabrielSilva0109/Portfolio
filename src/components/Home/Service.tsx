@@ -38,6 +38,10 @@ const Boxes = styled.div`
   justify-content: center;
   align-items: center;
   gap: 40px;
+
+  @media(max-width: 768px){
+    flex-direction: column;
+  }
 `
 
 const Box = styled.div`
@@ -51,28 +55,28 @@ const TopBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;    
-`;
+`
 
 const Text = styled.div`
   font-weight: bold;
   text-align: justify;
   color: #696969;
-`;
+`
 
 const List = styled.ul`
   padding: 0px 0px;
   list-style: none;
-`;
+`
 
 const ItemList = styled.li`
   font-weight: bold;
   padding: 5px 0;
   font-size: 0.95rem;
-`;
+`
 
 const Icon = styled.img`
   width: 50px;
-`;
+`
 
 const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
   return (
