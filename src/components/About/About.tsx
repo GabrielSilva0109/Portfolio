@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import Header from '../Header/Header';
-import styled from 'styled-components';
+import React, { useState } from 'react'
+import Header from '../Header/Header'
+import styled from 'styled-components'
 
 interface AboutProps {
-  toggleTheme: () => void;
-  theme: string;
+  toggleTheme: () => void
+  theme: string
 }
 
 const Container = styled.div`
   display: flex;
+  max-width: 100vw;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -28,18 +29,17 @@ const Right = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  position: relative;
+  
 `
 
 const Tabs = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 90%;
 `
 
 const Tab = styled.button<{ active: boolean }>`
   flex: 1;
-  padding: 10px;
   cursor: pointer;
   border: none;
   outline: none;
@@ -61,7 +61,7 @@ const Tab = styled.button<{ active: boolean }>`
 `
 
 const Content = styled.div`
-  width: 100%;
+  width: 90%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -71,7 +71,7 @@ const Content = styled.div`
 `
 
 const Section = styled.div<{ visible: boolean }>`
-   width: 100%;
+  width: 90%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -89,7 +89,6 @@ const Title = styled.h1`
 
 const SkillsContainer = styled.div`
   width: 100%;
-  
 `
 
 const SkillItem = styled.div`
@@ -99,6 +98,7 @@ const SkillItem = styled.div`
 const SkillName = styled.span`
   display: block;
   font-size: 1rem;
+  font-weight: bold;
   margin-bottom: 5px;
 `
 
@@ -171,7 +171,7 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
         </Right>
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About
