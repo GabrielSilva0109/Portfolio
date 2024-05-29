@@ -14,9 +14,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
   height: 500px;
   margin-bottom: 50px;
+  margin: 0;
+  padding: 0;
 
   @media(max-width: 768px){
     flex-direction: column;
@@ -65,10 +66,6 @@ const SubTitle = styled.h3`
   @media(max-width: 768px){
     margin-top: -35px;
   }
-`
-
-const Text = styled.p`
-
 `
 
 const Img = styled.img`
@@ -121,7 +118,6 @@ const Home: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
         <LeftContainer>
           <Title>Fullstack Developer</Title>
           <SubTitle>Desenvolvendo o futuro digital com <span>Inovação</span>, <span>Criatividade</span> e <span>Código refinado</span>.</SubTitle>
-          <Text></Text>
           <Btns>
             <BtnContato>
               <ToLink to="/contato">Contato</ToLink>

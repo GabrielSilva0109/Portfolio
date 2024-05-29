@@ -3,6 +3,10 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Noto+Sans+Sinhala:400,700');
 
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
@@ -29,4 +33,4 @@ export const GlobalStyles = createGlobalStyle`
   h5 { font-size: 1.333rem; } /* 21.28px */
 
   small { font-size: 0.750rem; } /* 12px */
-`;
+`

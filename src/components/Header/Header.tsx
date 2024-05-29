@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import ToggleBtn from './ToggleBtn'
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom'
 
 const Container = styled.div`
   display: flex;
@@ -9,9 +9,15 @@ const Container = styled.div`
   align-items: center;
   background-color: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text};
-  
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 
-  @media(max-width: 768px){
+
+  @media (max-width: 768px) {
     justify-content: space-between;
   }
 `
@@ -27,6 +33,8 @@ const Title = styled.h2`
 const Nav = styled.ul`
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 
   @media (max-width: 768px) {
     display: none;
@@ -44,6 +52,8 @@ const NavLink = styled(Link)<{ isActive: boolean }>`
   color: ${({ theme }) => theme.text};
   transition: 0.5s;
   position: relative;
+  display: inline-block;
+  white-space: nowrap;
 
   &:hover {
     background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
@@ -69,6 +79,23 @@ const NavLink = styled(Link)<{ isActive: boolean }>`
   `}
 `
 
+const MobileNavItem = styled.div`
+  margin: 10px 0;
+`;
+
+const MobileNavLink = styled(Link)`
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: ${({ theme }) => theme.text};
+  transition: 0.5s;
+
+  &:hover {
+    color: #1e30f3;
+  }
+`;
+
+
 const MenuIcon = styled.div`
   display: none;
   cursor: pointer;
@@ -93,22 +120,6 @@ const MobileMenu = styled.div<{ show: boolean }>`
   max-height: ${({ show }) => (show ? '300px' : '0')};
   overflow: hidden;
   transition: max-height 0.4s ease-in-out;
-`
-
-const MobileNavItem = styled.div`
-  margin: 10px 0;
-`
-
-const MobileNavLink = styled(Link)`
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: ${({ theme }) => theme.text};
-  transition: 0.5s;
-
-  &:hover {
-    color: #1e30f3;
-  }
 `
 
 const DesktopToggleBtnContainer = styled.div`

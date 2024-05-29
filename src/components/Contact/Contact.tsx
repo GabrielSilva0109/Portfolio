@@ -1,6 +1,6 @@
 import react from 'react'
 import Header from '../Header/Header'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 import git from '../../IMG/Links/git.png'
 import whats from '../../IMG/Links/whatsapp.png'

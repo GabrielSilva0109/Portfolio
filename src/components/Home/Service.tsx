@@ -18,6 +18,9 @@ const Container = styled.div`
   flex-direction: column;
   gap: 40px;
   margin-top: 120px ;
+  margin: 0;
+  padding: 0;
+
 `
 
 const Title = styled.h1`

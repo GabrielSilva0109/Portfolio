@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header'
 import styled from 'styled-components'
 
@@ -22,8 +22,13 @@ const Container = styled.div`
 
 const Left = styled.div`
   width: 40%;
-  background: gray;
   height: 500px;
+  padding: 10px;
+
+  @media(max-width: 768px) {
+    width: 90%;
+    padding: 10px;
+  }
 `
 
 const Right = styled.div`
@@ -34,12 +39,19 @@ const Right = styled.div`
   align-items: center;
   justify-content: flex-start;
   
+  @media(max-width: 768px) {
+    width: 90%;
+    padding: 10px;
+  }
 `
 
 const Tabs = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 90%;
+  align-items: self-end;
+  width: 100%;
+  height: 70px;
+ 
 `
 
 const Tab = styled.button<{ active: boolean }>`
@@ -65,7 +77,7 @@ const Tab = styled.button<{ active: boolean }>`
 `
 
 const Content = styled.div`
-  width: 90%;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -75,7 +87,7 @@ const Content = styled.div`
 `
 
 const Section = styled.div<{ visible: boolean }>`
-  width: 90%;
+  width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -88,7 +100,46 @@ const Section = styled.div<{ visible: boolean }>`
 `
 
 const Title = styled.h1`
-  font-size: 1.8rem;
+  background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: inherit;
+  text-align: center;
+  border-bottom: 2.5px solid gray;
+`
+
+const SubTitle = styled.h3`
+  font-size: 1.3rem;
+  padding: 0;
+  background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+`
+
+const Text = styled.p`
+  text-align: justify;
+  font-weight: bold;
+  color: #696969;
+  padding: 10px;
+  font-size: 1.2rem;
+`
+
+const Cargo = styled.p`
+  text-align: justify;
+  font-weight: bold;
+  color: ${({ theme }) => theme.text};
+  font-size: 1rem;
+  margin-top: -20px;
+`
+
+const AboutCargo = styled.p`
+  text-align: justify;
+  font-weight: bold;
+  color: gray;
+  font-size: 0.8rem;
+  margin-top: -10px;
 `
 
 const SkillsContainer = styled.div`
@@ -108,7 +159,7 @@ const SkillName = styled.span`
 
 const ProgressBarContainer = styled.div`
   width: 100%;
-  background: #e0e0e0;
+  background: #b7b7b7;
   border-radius: 5px;
   overflow: hidden;
 `
@@ -116,8 +167,54 @@ const ProgressBarContainer = styled.div`
 const ProgressBar = styled.div<{ percentage: number }>`
   width: ${(props) => props.percentage}%;
   background: linear-gradient(90deg, rgba(10, 2, 247, 1) 0%, rgba(53, 132, 167, 1) 51%, rgba(48, 210, 190, 1) 100%);
-  height: 10px;
+  height: 12px;
   transition: width 1s ease-in-out;
+`
+
+const Boxes = styled.div`
+  display: flex; 
+  flex-direction: column;
+  width: 100%;
+  align-itens: center;
+  justify-content: start;
+`
+
+const Box = styled.div`
+
+`
+
+const Separator = styled.hr`
+    width: 80%;
+    border: 1px solid gray;
+    margin: 0px 0;
+`
+
+const CerticadeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+`
+
+const Certificade = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;  
+`
+
+const Curso =styled.h3`
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  transition: 0.7s;
+  cursor: pointer;
+  &:hover{
+    background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
 `
 
 const skillsData = [
@@ -133,15 +230,27 @@ const skillsData = [
   { name: 'Spring', percentage: 70 },
 ]
 
+const titles = ['Programador', 'Desenvolvedor', 'Estudante']
+
 const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
   const [activeTab, setActiveTab] = useState('skills')
+  
 
   return (
     <div>
       <Header toggleTheme={toggleTheme} theme={theme} />
       <Container>
         <Left>
-          <Title>Eu sou um</Title>
+          <Title>Fullstack Developer</Title>
+
+          <Text>
+              Olá! Sou Desenvolvedor de Software Fullstack, habilidoso em serviços de cloud da AWS, APIs Backend,
+              além de criar interfaces intuitivas e assíncronas para o usuário. Também sou aluno de Análise e 
+              Desenvolvimento de Sistemas no 5º/5º semestre, e formado em Marketing.<br></br> <br></br> Mantenho-me atualizado com
+              as tendências tecnológicas e sou fascinado por transformar linhas de código em soluções práticas. 
+              Estou ansioso para continuar aprendendo e explorando novas possibilidades no vasto universo do desenvolvimento
+              de software.
+          </Text>
         </Left>
 
         <Right>
@@ -152,25 +261,105 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
             <Tab active={activeTab === 'experience'} onClick={() => setActiveTab('experience')}>
               Experiência
             </Tab>
+            <Tab active={activeTab === 'certificados'} onClick={() => setActiveTab('certificados')}>
+              Certificados
+            </Tab>
           </Tabs>
 
           <Content>
-          <Section visible={activeTab === 'skills'}>
-              <SkillsContainer>
-                {skillsData.map((skill) => (
-                  <SkillItem key={skill.name}>
-                    <SkillName>{skill.name}</SkillName>
-                    <ProgressBarContainer>
-                      <ProgressBar percentage={skill.percentage} />
-                    </ProgressBarContainer>
-                  </SkillItem>
-                ))}
-              </SkillsContainer>
-            </Section>
+              <Section visible={activeTab === 'skills'}>
+                <SkillsContainer>
+                  {skillsData.map((skill) => (
+                    <SkillItem key={skill.name}>
+                      <SkillName>{skill.name}</SkillName>
+                      <ProgressBarContainer>
+                        <ProgressBar percentage={skill.percentage} />
+                      </ProgressBarContainer>
+                    </SkillItem>
+                  ))}
+                </SkillsContainer>
+              </Section>
 
-            <Section visible={activeTab === 'experience'}>
+              <Section visible={activeTab === 'experience'}>
+                <Boxes>
 
-            </Section>
+                 <Box>
+                  <SubTitle>Brame Automações</SubTitle>
+                  <Cargo>Desenvolvedor Fullstack | 06/2023 - Atual</Cargo>
+                  <AboutCargo>Trabalhar na Brame Automações é uma oportunidade de estar imerso em um ambiente dinâmico 
+                    e desafiador. Na equipe, sou responsável pelo desenvolvimento e implementação de sistemas backend 
+                    robustos, garantindo a eficiência e integridade dos dados. Além disso, colaboro na criação de APIs 
+                    RESTful para facilitar a comunicação entre diferentes componentes, e mantenho um monitoramento contínuo
+                     para identificar e corrigir bugs. Adoto práticas de codificação limpa e padrões de design, visando 
+                     sempre a excelência na entrega de soluções inovadoras. Minha participação em processos colaborativos
+                      promove a busca por objetivos comuns, fortalecendo o crescimento e sucesso da equipe e da empresa como um todo.
+                  </AboutCargo>
+                 </Box>
+
+                  <Separator/>
+                 <Box>
+                  <SubTitle>Body House</SubTitle>
+                  <Cargo>Vendedor | 06/2017 - 06/2022</Cargo>
+                 </Box>
+
+                 <Separator/>
+
+                 <Box>
+                  <SubTitle>Reason Tecnologias</SubTitle>
+                  <Cargo>Menor Aprendiz | 03/2016 - 05/2017</Cargo>
+                 </Box>
+                </Boxes>
+              </Section>
+
+              <Section visible={activeTab === 'certificados'}>
+                  <CerticadeContainer>
+                    <Certificade>
+                      <Curso>Software Enginer | HackerRank</Curso>
+                      
+                    </Certificade>
+                    <Separator/>
+                    <Certificade>
+                      <Curso>APIs RestFull | HackerRank</Curso>
+                    </Certificade>
+                    <Separator/>
+                    <Certificade>
+                      <Curso>SQL | HackerRank</Curso>
+                    </Certificade>
+                    <Separator/>
+                    <Certificade>
+                      <Curso>Typescript Developer | DIO</Curso>
+                      
+                    </Certificade>
+                    <Separator/>
+                    <Certificade>
+                      <Curso>React com Typescript | DIO</Curso>
+                    </Certificade>
+                    <Separator/>
+                    <Certificade>
+                    <Curso>Java Developer | DIO</Curso>
+                      
+                    </Certificade>
+                    <Separator/>
+                    <Certificade>
+                    <Curso>Java com Cloud AWS | DIO</Curso>
+                      
+                    </Certificade>
+                    <Separator/>
+                    <Certificade>
+                    <Curso>JavaScript ES6 | Origamid</Curso>
+                      
+                    </Certificade>
+                    <Separator/>
+                    <Certificade>
+                    <Curso>HTML e CSS | Origamid</Curso>
+                      
+                    </Certificade>
+                    
+
+                  
+
+                  </CerticadeContainer>
+              </Section>
           </Content>
         </Right>
       </Container>
