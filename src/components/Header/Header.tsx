@@ -10,6 +10,10 @@ const Container = styled.div`
   background-color: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text};
   padding: 10px 20px;
+
+  @media(max-width: 768px){
+    justify-content: space-between;
+  }
 `
 
 const Title = styled.h2`
@@ -80,7 +84,8 @@ const MobileMenu = styled.div<{ show: boolean }>`
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 60px; /* Ajuste conforme necessário */
+  top: 60px;
+  padding: 15px;
   left: 0;
   width: 100%;
   background-color: ${({ theme }) => theme.body};
