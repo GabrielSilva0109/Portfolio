@@ -14,6 +14,10 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
+
+  @media(max-width: 768px){
+    flex-direction: column;
+  }
 `
 
 const Left = styled.div`

@@ -9,7 +9,7 @@ const Container = styled.div`
   align-items: center;
   background-color: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text};
-  padding: 10px 20px;
+  
 
   @media(max-width: 768px){
     justify-content: space-between;
