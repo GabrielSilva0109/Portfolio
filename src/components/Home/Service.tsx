@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
-import web from '../../IMG/iconsWeb.png';
-import back from '../../IMG/iconsBack.png';
-import db from '../../IMG/iconsDB.png';
+import web from '../../IMG/iconsWeb.png'
+import back from '../../IMG/iconsBack.png'
+import db from '../../IMG/iconsDB.png'
 
 interface HomeProps {
   toggleTheme: () => void;
@@ -31,6 +31,12 @@ const Title = styled.h1`
 
 const SubTitle = styled.h3`
   margin-top: -20px;
+
+  text-align: center;
+  @media(max-width: 768px){
+    font-size: 1.6rem;
+    margin-top: -40px;
+  }
 `
 
 const Boxes = styled.div`
