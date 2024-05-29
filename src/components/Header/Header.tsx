@@ -58,7 +58,7 @@ const NavLink = styled(Link)<{ isActive: boolean }>`
       background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
       border-radius: 10px;
       position: absolute;
-      bottom: -2px;
+      bottom: -4px;
       transition: 0.5s;
       left: 0;
     }
