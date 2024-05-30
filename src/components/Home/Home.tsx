@@ -69,7 +69,7 @@ const SubTitle = styled.h3`
 `
 
 const Img = styled.img`
-  width: 60%;
+  width: 80%;
   border-radius: 40%;
   margin:
 `
