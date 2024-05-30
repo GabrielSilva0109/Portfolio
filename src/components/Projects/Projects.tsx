@@ -181,6 +181,8 @@ const Projects: React.FC<ProjectsProps> = ({ toggleTheme, theme }) => {
                     </Right>
                 </Project>
 
+                <Separator/>
+
                 <Project>
                     <Left>
                         <Img src={condado}/>
@@ -244,8 +246,12 @@ const Projects: React.FC<ProjectsProps> = ({ toggleTheme, theme }) => {
                     </Left>
 
                     <Right>
-                        <Top href='https://fabibattisti-psi.netlify.app/' target='blank'>
+                        <Top>
+                        <div onClick={() => notifyNotHosted("Fabiana")}>
                             <Title>Fabiana Battisti</Title>
+
+                        </div>
+
                         </Top>
                         <Subtitle>Free-Lancer | Site para Psicologa</Subtitle>
                         <Text>

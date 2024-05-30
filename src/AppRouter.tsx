@@ -6,7 +6,7 @@ import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 
 interface AppRouterProps {
-  toggleTheme: () => void;
+  toggleTheme: () => void
 }
 
 const AppRouter: React.FC<AppRouterProps> = ({ toggleTheme }) => {

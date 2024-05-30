@@ -188,8 +188,9 @@ const Boxes = styled.div`
   display: flex; 
   flex-direction: column;
   width: 100%;
-  align-itens: center;
+  align-items: center;
   justify-content: start;
+  margin-top: 50px;
 `
 
 const Box = styled.div`
