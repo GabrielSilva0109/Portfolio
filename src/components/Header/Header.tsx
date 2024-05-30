@@ -17,9 +17,6 @@ const Container = styled.div`
   padding: 0;
 
 
-  @media (max-width: 768px) {
-    justify-content: space-between;
-  }
 `
 
 const Title = styled.h2`

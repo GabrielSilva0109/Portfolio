@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header'
 import styled from 'styled-components'
-import Modal from 'react-modal'
 
 //Certificados
 import softEnginer from '../../IMG/certificates/softEnginer.png'
@@ -30,6 +29,7 @@ const Container = styled.div`
 
   @media(max-width: 768px){
     flex-direction: column;
+    gap: 250px;
   }
 `
 
@@ -53,7 +53,7 @@ const Right = styled.div`
   justify-content: flex-start;
   
   @media(max-width: 768px) {
-    width: 90%;
+    width: 100%;
     padding: 10px;
   }
 `
@@ -231,6 +231,60 @@ const Curso =styled.a`
   
 `
 
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+`
+
+const ModalContent = styled.div`
+  background-color: ${({ theme }) => theme.body};
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const ModalImage = styled.img`
+  max-width: 100%;
+  max-height: 80vh;
+`
+
+const CloseButton = styled.button`
+  background: red;
+  width: 18px;
+  height: 18px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.2rem;
+  color:white;
+  position: absolute;
+  top: 60px;
+  right: 340px;
+  cursor: pointer;
+
+  &:hover{
+    background:#b80000;
+  }
+
+  @media( max-width: 768px){
+    display: none;
+  }
+`
+
 const skillsData = [
   { name: 'Java', percentage: 80 },
   { name: 'JavaScript', percentage: 90 },
@@ -244,44 +298,21 @@ const skillsData = [
   { name: 'Spring', percentage: 70 },
 ]
 
-// Estilos do modal
-const customStyles: Modal.Styles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    maxWidth: '90%',
-    maxHeight: '90%',
-  },
-}
-
-Modal.setAppElement('#root')
-
-const CertificateImage = styled.img`
-  width: 100%;
-  height: auto;
-  max-width: 600px;
-  max-height: 600px;
-`
 
 const titles = ['Programador', 'Desenvolvedor', 'Estudante']
 
 const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
-  const [activeTab, setActiveTab] = useState('skills')
-  
-  const [modalIsOpen, setIsOpen] = useState<boolean>(false)
-  const [currentImage, setCurrentImage] = useState<string>('')
+  const [activeTab, setActiveTab] = useState('skills');
+  const [modalIsOpen, setIsOpen] = useState<boolean>(false);
+  const [currentImage, setCurrentImage] = useState<string>('');
 
   function openModal(image: string): void {
-    setCurrentImage(image)
-    setIsOpen(true)
+    setCurrentImage(image);
+    setIsOpen(true);
   }
 
   function closeModal(): void {
-    setIsOpen(false)
+    setIsOpen(false);
   }
 
   return (
@@ -398,20 +429,18 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
                   </Certificade>
                 </CerticadeContainer>
               </Section>
-              <Modal
-                isOpen={modalIsOpen}
-                onRequestClose={closeModal}
-                style={customStyles}
-                contentLabel="Certificado"
-              >
-                <button onClick={closeModal}>Fechar</button>
-                <CertificateImage src={currentImage} alt="Certificado" />
-              </Modal>
-
 
           </Content>
         </Right>
       </Container>
+      {modalIsOpen && (
+        <ModalOverlay onClick={closeModal}>
+          <ModalContent onClick={(e) => e.stopPropagation()}>
+            <CloseButton onClick={closeModal}>×</CloseButton>
+            <ModalImage src={currentImage} alt="Certificado" />
+          </ModalContent>
+        </ModalOverlay>
+      )}
     </div>
   )
 }
