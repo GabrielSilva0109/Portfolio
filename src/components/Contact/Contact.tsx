@@ -5,10 +5,11 @@ import styled from 'styled-components'
 import git from '../../IMG/Links/git.png'
 import whats from '../../IMG/Links/whatsapp.png'
 import linkedin from '../../IMG/Links/linkedin.png'
+import gmail from '../../IMG/Icons/iconGmail.png'
 
 interface ContactProps {
-    toggleTheme: () => void;
-    theme: string;
+    toggleTheme: () => void
+    theme: string
 }
 
 const Container = styled.div`
@@ -46,11 +47,11 @@ const SubTitle = styled.h3`
 
 `
 
-
 const Links = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 `
 
 const Link = styled.a`
@@ -58,8 +59,15 @@ const Link = styled.a`
 `
 
 const Icon = styled.img`
+    width: 60px;
+    transition: transform 0.3s ease, filter 0.3s ease;
 
+    &:hover {
+        transform: scale(1.2) rotate(15deg);
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+    }
 `
+
 const Contact: React.FC<ContactProps> = ({ toggleTheme, theme }) => {
     return (
         <>
@@ -71,16 +79,20 @@ const Contact: React.FC<ContactProps> = ({ toggleTheme, theme }) => {
                 </Top>  
                 
                 <Links>
-                    <Link>
-                        <Icon src={git}/>
+                    <Link href="https://github.com/GabrielSilva0109" target="_blank" rel="noopener noreferrer">
+                        <Icon src={git} alt="GitHub" />
                     </Link>
                     
-                    <Link>
-                        <Icon src={linkedin}/>
+                    <Link href="https://www.linkedin.com/in/gabriel-silva-a48147242/" target="_blank" rel="noopener noreferrer">
+                        <Icon src={linkedin} alt="LinkedIn" />
                     </Link>
 
-                    <Link>
-                        <Icon src={whats}/>
+                    <Link href="https://wa.me/5548998511671" target="_blank" rel="noopener noreferrer">
+                        <Icon src={whats} alt="WhatsApp" />
+                    </Link>
+
+                    <Link href="mailto:silvagabriel0109@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <Icon src={gmail} alt="Email" />
                     </Link>
                 </Links>
             </Container>

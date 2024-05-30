@@ -197,7 +197,7 @@ const Box = styled.div`
 `
 
 const Separator = styled.hr`
-    width: 80%;
+    width: 100%;
     border: 1px solid gray;
     margin: 0px 0;
 `
@@ -211,8 +211,8 @@ const CerticadeContainer = styled.div`
 
 const Certificade = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 100%;  
+  justify-content: space-between;
+  width: 100%;
 `
 
 const Curso =styled.a`
@@ -393,39 +393,39 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
               <Section visible={activeTab === 'certificados'}>
                 <CerticadeContainer>
                   <Certificade>
-                    <Curso onClick={() => openModal(softEnginer)}>Software Enginer | HackerRank</Curso>
+                    <Curso onClick={() => openModal(softEnginer)}>Software Enginer | HackerRank</Curso><Curso>36h</Curso>
                   </Certificade>
                   <Separator />
                   <Certificade>
-                    <Curso onClick={() => openModal(restApi)}>APIs RestFull | HackerRank</Curso>
+                    <Curso onClick={() => openModal(restApi)}>APIs RestFull | HackerRank</Curso><Curso>18h</Curso>
                   </Certificade>
                   <Separator />
                   <Certificade>
-                    <Curso onClick={() => openModal(sql)}>SQL | HackerRank</Curso>
+                    <Curso onClick={() => openModal(sql)}>SQL | HackerRank</Curso><Curso>26h</Curso>
                   </Certificade>
                   <Separator />
                   <Certificade>
-                    <Curso onClick={() => openModal(typesDeveloper)}>Typescript Developer | DIO</Curso>
+                    <Curso onClick={() => openModal(typesDeveloper)}>Typescript Developer | DIO</Curso><Curso>44h</Curso>
                   </Certificade>
                   <Separator />
                   <Certificade>
-                    <Curso onClick={() => openModal(reactTypes)}>React com Typescript | DIO</Curso>
+                    <Curso onClick={() => openModal(reactTypes)}>React com Typescript | DIO</Curso><Curso>10h</Curso>
                   </Certificade>
                   <Separator />
                   <Certificade>
-                    <Curso onClick={() => openModal(javaDeveloper)}>Java Developer | DIO</Curso>
+                    <Curso onClick={() => openModal(javaDeveloper)}>Java Developer | DIO</Curso><Curso>76h</Curso>
                   </Certificade>
                   <Separator />
                   <Certificade>
-                    <Curso onClick={() => openModal(JavaAws)}>Java com Cloud AWS | DIO</Curso>
+                    <Curso onClick={() => openModal(JavaAws)}>Java com Cloud AWS | DIO</Curso><Curso>65h</Curso>
                   </Certificade>
                   <Separator />
                   <Certificade>
-                    <Curso onClick={() => openModal(js)}>JavaScript ES6 | Origamid</Curso>
+                    <Curso onClick={() => openModal(js)}>JavaScript ES6 | Origamid</Curso><Curso>74h</Curso>
                   </Certificade>
                   <Separator />
                   <Certificade>
-                    <Curso onClick={() => openModal(htmlCss)}>HTML e CSS | Origamid</Curso>
+                    <Curso onClick={() => openModal(htmlCss)}>HTML e CSS | Origamid</Curso><Curso>46h</Curso>
                   </Certificade>
                 </CerticadeContainer>
               </Section>
