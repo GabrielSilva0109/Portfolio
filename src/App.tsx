@@ -9,7 +9,6 @@ function App() {
   const storedTheme = localStorage.getItem('theme')
   const [theme, setTheme] = useState(storedTheme || 'light')
 
-
   useEffect(() => {
     localStorage.setItem('theme', theme);
   }, [theme])
