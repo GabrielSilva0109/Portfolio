@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header'
 import styled from 'styled-components'
 
+//Certificados
+import softEnginer from '../../IMG/certificates/softEnginer.png'
+import restApi from '../../IMG/certificates/RestApi.png'
+import sql from '../../IMG/certificates/sql.png'
+import typesDeveloper from '../../IMG/certificates/TypescriptDeveloper.png'
+import reactTypes from '../../IMG/certificates/ReactType.jpeg'
+
 interface AboutProps {
   toggleTheme: () => void
   theme: string
@@ -202,7 +209,8 @@ const Certificade = styled.div`
   width: 100%;  
 `
 
-const Curso =styled.h3`
+const Curso =styled.a`
+  text-decoration: none;
   font-size: 1.1rem;
   font-weight: bold;
   padding: 0;
@@ -314,7 +322,7 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
               <Section visible={activeTab === 'certificados'}>
                   <CerticadeContainer>
                     <Certificade>
-                      <Curso>Software Enginer | HackerRank</Curso>
+                      <Curso href='https://www.hackerrank.com/certificates/df6521a31f4e' target='blank'>Software Enginer | HackerRank</Curso>
                       
                     </Certificade>
                     <Separator/>
