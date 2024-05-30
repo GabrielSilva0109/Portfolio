@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header'
 import styled from 'styled-components'
+import Modal from 'react-modal'
 
 //Certificados
 import softEnginer from '../../IMG/certificates/softEnginer.png'
@@ -8,6 +9,11 @@ import restApi from '../../IMG/certificates/RestApi.png'
 import sql from '../../IMG/certificates/sql.png'
 import typesDeveloper from '../../IMG/certificates/TypescriptDeveloper.png'
 import reactTypes from '../../IMG/certificates/ReactType.jpeg'
+import htmlCss from '../../IMG/certificates/htmlCss.jpeg'
+import js from '../../IMG/certificates/Js.jpeg'
+import javaDeveloper from '../../IMG/certificates/JavaDeveloper.png'
+import JavaAws from '../../IMG/certificates/JavaAws.jpeg'
+
 
 interface AboutProps {
   toggleTheme: () => void
@@ -238,11 +244,45 @@ const skillsData = [
   { name: 'Spring', percentage: 70 },
 ]
 
+// Estilos do modal
+const customStyles: Modal.Styles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    maxWidth: '90%',
+    maxHeight: '90%',
+  },
+}
+
+Modal.setAppElement('#root')
+
+const CertificateImage = styled.img`
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  max-height: 600px;
+`
+
 const titles = ['Programador', 'Desenvolvedor', 'Estudante']
 
 const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
   const [activeTab, setActiveTab] = useState('skills')
   
+  const [modalIsOpen, setIsOpen] = useState<boolean>(false)
+  const [currentImage, setCurrentImage] = useState<string>('')
+
+  function openModal(image: string): void {
+    setCurrentImage(image)
+    setIsOpen(true)
+  }
+
+  function closeModal(): void {
+    setIsOpen(false)
+  }
 
   return (
     <div>
@@ -320,54 +360,55 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
               </Section>
 
               <Section visible={activeTab === 'certificados'}>
-                  <CerticadeContainer>
-                    <Certificade>
-                      <Curso href='https://www.hackerrank.com/certificates/df6521a31f4e' target='blank'>Software Enginer | HackerRank</Curso>
-                      
-                    </Certificade>
-                    <Separator/>
-                    <Certificade>
-                      <Curso>APIs RestFull | HackerRank</Curso>
-                    </Certificade>
-                    <Separator/>
-                    <Certificade>
-                      <Curso>SQL | HackerRank</Curso>
-                    </Certificade>
-                    <Separator/>
-                    <Certificade>
-                      <Curso>Typescript Developer | DIO</Curso>
-                      
-                    </Certificade>
-                    <Separator/>
-                    <Certificade>
-                      <Curso>React com Typescript | DIO</Curso>
-                    </Certificade>
-                    <Separator/>
-                    <Certificade>
-                    <Curso>Java Developer | DIO</Curso>
-                      
-                    </Certificade>
-                    <Separator/>
-                    <Certificade>
-                    <Curso>Java com Cloud AWS | DIO</Curso>
-                      
-                    </Certificade>
-                    <Separator/>
-                    <Certificade>
-                    <Curso>JavaScript ES6 | Origamid</Curso>
-                      
-                    </Certificade>
-                    <Separator/>
-                    <Certificade>
-                    <Curso>HTML e CSS | Origamid</Curso>
-                      
-                    </Certificade>
-                    
-
-                  
-
-                  </CerticadeContainer>
+                <CerticadeContainer>
+                  <Certificade>
+                    <Curso onClick={() => openModal(softEnginer)}>Software Enginer | HackerRank</Curso>
+                  </Certificade>
+                  <Separator />
+                  <Certificade>
+                    <Curso onClick={() => openModal(restApi)}>APIs RestFull | HackerRank</Curso>
+                  </Certificade>
+                  <Separator />
+                  <Certificade>
+                    <Curso onClick={() => openModal(sql)}>SQL | HackerRank</Curso>
+                  </Certificade>
+                  <Separator />
+                  <Certificade>
+                    <Curso onClick={() => openModal(typesDeveloper)}>Typescript Developer | DIO</Curso>
+                  </Certificade>
+                  <Separator />
+                  <Certificade>
+                    <Curso onClick={() => openModal(reactTypes)}>React com Typescript | DIO</Curso>
+                  </Certificade>
+                  <Separator />
+                  <Certificade>
+                    <Curso onClick={() => openModal(javaDeveloper)}>Java Developer | DIO</Curso>
+                  </Certificade>
+                  <Separator />
+                  <Certificade>
+                    <Curso onClick={() => openModal(JavaAws)}>Java com Cloud AWS | DIO</Curso>
+                  </Certificade>
+                  <Separator />
+                  <Certificade>
+                    <Curso onClick={() => openModal(js)}>JavaScript ES6 | Origamid</Curso>
+                  </Certificade>
+                  <Separator />
+                  <Certificade>
+                    <Curso onClick={() => openModal(htmlCss)}>HTML e CSS | Origamid</Curso>
+                  </Certificade>
+                </CerticadeContainer>
               </Section>
+              <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                style={customStyles}
+                contentLabel="Certificado"
+              >
+                <button onClick={closeModal}>Fechar</button>
+                <CertificateImage src={currentImage} alt="Certificado" />
+              </Modal>
+
+
           </Content>
         </Right>
       </Container>
