@@ -64,7 +64,7 @@ const Tabs = styled.div`
   align-items: self-end;
   width: 100%;
   height: 70px;
- 
+  
 `
 
 const Tab = styled.button<{ active: boolean }>`
@@ -86,6 +86,10 @@ const Tab = styled.button<{ active: boolean }>`
     background-image: ${(props) => (props.active ? 'linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%)' : 'none')};
     -webkit-background-clip: ${(props) => (props.active ? 'text' : 'none')};
     background-clip: ${(props) => (props.active ? 'text' : 'none')};
+  }
+
+  @media(max-with: 768px){
+    font-size: 1.3rem;
   }
 `
 
