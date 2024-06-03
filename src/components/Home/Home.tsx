@@ -120,9 +120,11 @@ const Home: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
             <BtnContato>
               <ToLink to="/contato">Contato</ToLink>
             </BtnContato>
-            <BtnCV href="../../IMG/GabrielSilva.pdf" download>
+            {/* 
+            <BtnCV href="./GabrielSilva.pdf" download>
               Curriculo
             </BtnCV>
+            */}
           </Btns>
         </LeftContainer>
         <RightContainer>
