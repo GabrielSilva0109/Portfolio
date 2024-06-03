@@ -22,7 +22,7 @@ const Container = styled.div`
 `
 
 const Top = styled.div`
-    padding: 50px 0px;
+    padding: 50px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
