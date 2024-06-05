@@ -167,11 +167,11 @@ const Projects: React.FC<ProjectsProps> = ({ toggleTheme, theme }) => {
                         <Img src={inov}/>
                     </Left>
                     <Right>
-                        <div onClick={() => notifyNotHosted("Clint")}>
+                        
                         <Top href='https://inov-nutrition.vercel.app/' target='blank'>
                             <Title>Inov Nutrition</Title>
                         </Top>
-                        </div>
+                        
                         <Subtitle>Free Lancer | Site Marca de Suplementos</Subtitle>
                         <Text>Inov Nutrition é um projeto freelancer desenvolvido para uma marca de Suplementos 
                             exportivos de Blumenau SC. Este site foi criado apresentar a marca aos clientes e 
