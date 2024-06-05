@@ -11,6 +11,7 @@ import condado from '../../IMG/Projects/condado.jpg'
 import dogHouse from '../../IMG/Projects/dogHouse.jpg'
 import goParty from '../../IMG/Projects/gopart.jpg'
 import clint from '../../IMG/Projects/clint.jpg'
+import inov from '../../IMG/Projects/inov.jpg'
 
 // Importando os ícones
 import node from '../../IMG/Icons/Node-icon.png'
@@ -155,6 +156,30 @@ const Projects: React.FC<ProjectsProps> = ({ toggleTheme, theme }) => {
                             <Icon src={node}/>
                             <Icon src={mysql}/>
                             <Icon src={aws}/>
+                        </Tecs>
+                    </Right>
+                </Project>
+
+                <Separator />
+
+                <Project>
+                    <Left>
+                        <Img src={inov}/>
+                    </Left>
+                    <Right>
+                        <div onClick={() => notifyNotHosted("Clint")}>
+                        <Top href='https://inov-nutrition.vercel.app/' target='blank'>
+                            <Title>Inov Nutrition</Title>
+                        </Top>
+                        </div>
+                        <Subtitle>Free Lancer | Site Marca de Suplementos</Subtitle>
+                        <Text>Inov Nutrition é um projeto freelancer desenvolvido para uma marca de Suplementos 
+                            exportivos de Blumenau SC. Este site foi criado apresentar a marca aos clientes e 
+                            lojistas proporcionando uma plataforma com 
+                            fotos e descrições detalhadas sobre os produtos oferecidos.</Text>
+                        <Tecs>
+                            <Icon src={react}/>
+                            <Icon src={js}/>
                         </Tecs>
                     </Right>
                 </Project>
