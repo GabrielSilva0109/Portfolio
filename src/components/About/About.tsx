@@ -12,7 +12,7 @@ import htmlCss from '../../IMG/certificates/htmlCss.jpeg'
 import js from '../../IMG/certificates/Js.jpeg'
 import javaDeveloper from '../../IMG/certificates/JavaDeveloper.png'
 import JavaAws from '../../IMG/certificates/JavaAws.jpeg'
-
+import aws from '../../IMG/certificates/AWS.png'
 
 interface AboutProps {
   toggleTheme: () => void
@@ -398,7 +398,11 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
               <Section visible={activeTab === 'certificados'}>
                 <CerticadeContainer>
                   <Certificade>
-                    <Curso onClick={() => openModal(softEnginer)}>Software Enginer | HackerRank</Curso><Curso>36h</Curso>
+                    <Curso onClick={() => openModal(softEnginer)}>Software Enginer | HackerRank </Curso><Curso>36h</Curso>
+                  </Certificade>
+                  <Separator/>
+                  <Certificade>
+                    <Curso onClick={() => openModal(aws)}>AWS CLoud Practitioner | DIO </Curso><Curso>36h</Curso>
                   </Certificade>
                   <Separator />
                   <Certificade>
