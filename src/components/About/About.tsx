@@ -369,13 +369,8 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
                 <Box>
                   <SubTitle>Boom Prospect</SubTitle>
                   <Cargo>Desenvolvedor Fullstack | 07/2024 - Atual</Cargo>
-                  <AboutCargo>Trabalhar na Brame Automações é uma oportunidade de estar imerso em um ambiente dinâmico 
-                    e desafiador. Na equipe, sou responsável pelo desenvolvimento e implementação de sistemas backend 
-                    robustos, garantindo a eficiência e integridade dos dados. Além disso, colaboro na criação de APIs 
-                    RESTful para facilitar a comunicação entre diferentes componentes, e mantenho um monitoramento contínuo
-                     para identificar e corrigir bugs. Adoto práticas de codificação limpa e padrões de design, visando 
-                     sempre a excelência na entrega de soluções inovadoras. Minha participação em processos colaborativos
-                      promove a busca por objetivos comuns, fortalecendo o crescimento e sucesso da equipe e da empresa como um todo.
+                  <AboutCargo>
+                  
                   </AboutCargo>
                  </Box>
 
