@@ -192,7 +192,7 @@ const Boxes = styled.div`
   display: flex; 
   flex-direction: column;
   width: 100%;
-  align-items: center;
+  align-items: start;
   justify-content: start;
   margin-top: 50px;
 `
