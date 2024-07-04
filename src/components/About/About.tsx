@@ -366,10 +366,9 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
 
               <Section visible={activeTab === 'experience'}>
                 <Boxes>
-
-                 <Box>
-                  <SubTitle>Brame Automações</SubTitle>
-                  <Cargo>Desenvolvedor Fullstack | 06/2023 - Atual</Cargo>
+                <Box>
+                  <SubTitle>Boom Prospect</SubTitle>
+                  <Cargo>Desenvolvedor Fullstack | 07/2024 - Atual</Cargo>
                   <AboutCargo>Trabalhar na Brame Automações é uma oportunidade de estar imerso em um ambiente dinâmico 
                     e desafiador. Na equipe, sou responsável pelo desenvolvimento e implementação de sistemas backend 
                     robustos, garantindo a eficiência e integridade dos dados. Além disso, colaboro na criação de APIs 
@@ -377,6 +376,20 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
                      para identificar e corrigir bugs. Adoto práticas de codificação limpa e padrões de design, visando 
                      sempre a excelência na entrega de soluções inovadoras. Minha participação em processos colaborativos
                       promove a busca por objetivos comuns, fortalecendo o crescimento e sucesso da equipe e da empresa como um todo.
+                  </AboutCargo>
+                 </Box>
+
+                 <Box>
+                  <SubTitle>Brame Automações</SubTitle>
+                  <Cargo>Desenvolvedor Fullstack | 06/2023 - 07/2024</Cargo>
+                  <AboutCargo>
+                  -Desenvolvimento e implementação de sistemas backend robustos.
+                  -Criação de APIs RESTful para facilitar a comunicação eficiente entre diferentes componentes.
+                  -Monitoramento contínuo para identificar e corrigir problemas antes que impactem o desempenho.
+                  -Implementação de práticas de manutenção preventiva para garantir a eficiência e integridade dos dados.
+                  -Conexão eficiente de diferentes sistemas para uma operação coesa.
+                  -Adoção de práticas de codificação limpa e padrões de design.
+                  -Participação em processos colaborativos para atingir metas comuns.
                   </AboutCargo>
                  </Box>
 
