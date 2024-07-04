@@ -369,23 +369,13 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
                 <Box>
                   <SubTitle>Boom Prospect</SubTitle>
                   <Cargo>Desenvolvedor Fullstack | 07/2024 - Atual</Cargo>
-                  <AboutCargo>
                   
-                  </AboutCargo>
                  </Box>
 
                  <Box>
                   <SubTitle>Brame Automações</SubTitle>
                   <Cargo>Desenvolvedor Fullstack | 06/2023 - 07/2024</Cargo>
-                  <AboutCargo>
-                  -Desenvolvimento e implementação de sistemas backend robustos.
-                  -Criação de APIs RESTful para facilitar a comunicação eficiente entre diferentes componentes.
-                  -Monitoramento contínuo para identificar e corrigir problemas antes que impactem o desempenho.
-                  -Implementação de práticas de manutenção preventiva para garantir a eficiência e integridade dos dados.
-                  -Conexão eficiente de diferentes sistemas para uma operação coesa.
-                  -Adoção de práticas de codificação limpa e padrões de design.
-                  -Participação em processos colaborativos para atingir metas comuns.
-                  </AboutCargo>
+                  
                  </Box>
 
                   <Separator/>
