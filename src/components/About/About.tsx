@@ -371,7 +371,7 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
                   <Cargo>Desenvolvedor Fullstack | 07/2024 - Atual</Cargo>
                   
                  </Box>
-
+                 <Separator/>
                  <Box>
                   <SubTitle>Brame Automações</SubTitle>
                   <Cargo>Desenvolvedor Fullstack | 06/2023 - 07/2024</Cargo>
