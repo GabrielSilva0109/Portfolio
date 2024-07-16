@@ -46,13 +46,13 @@ const Title = styled.h1`
   background-image: linear-gradient(-225deg, rgb(10, 2, 247) 0%, #3584A7 51%, #30D2BE 100%);
   -webkit-background-clip: text;
   color: transparent;
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: bold;
   font-family: inherit;
 `
 
 const SubTitle = styled.h3`
-  margin-top: -40px;
+  margin-top: -35px;
 
   & span {
     transition: 1s;
@@ -68,8 +68,15 @@ const SubTitle = styled.h3`
   }
 `
 
+const Skills = styled.h3`
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: -40px;
+  color: gray;
+`
+
 const Img = styled.img`
-  width: 80%;
+  width: 60%;
   border-radius: 40%;
   margin:
 `
@@ -114,6 +121,7 @@ const Home: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
       <Header toggleTheme={toggleTheme} theme={theme} />
       <Container>
         <LeftContainer>
+          <Skills>TYPESCRIPT | REACT | FIREBASE</Skills>
           <Title>Fullstack Developer</Title>
           <SubTitle>Desenvolvendo o futuro digital com <span>Inovação</span>, <span>Criatividade</span> e <span>Código refinado</span>.</SubTitle>
           <Btns>
