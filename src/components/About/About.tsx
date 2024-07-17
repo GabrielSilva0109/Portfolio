@@ -13,6 +13,7 @@ import js from '../../IMG/certificates/Js.jpeg'
 import javaDeveloper from '../../IMG/certificates/JavaDeveloper.png'
 import JavaAws from '../../IMG/certificates/JavaAws.jpeg'
 import aws from '../../IMG/certificates/AWS.png'
+import Experience from './Experience'
 
 interface AboutProps {
   toggleTheme: () => void
@@ -448,6 +449,8 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
           </ModalContent>
         </ModalOverlay>
       )}
+
+      <Experience />
     </div>
   )
 }
