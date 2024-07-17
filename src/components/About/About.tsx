@@ -450,7 +450,7 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
         </ModalOverlay>
       )}
 
-      <Experience />
+      {/* <Experience /> */}
     </div>
   )
 }
