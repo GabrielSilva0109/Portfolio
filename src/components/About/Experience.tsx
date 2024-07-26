@@ -41,7 +41,7 @@ const Experience: React.FC = () => {
         <Container>
             <Title>Experience</Title>
         </Container>
-    );
-};
+    )
+}
 
-export default Experience;
+export default Experience
