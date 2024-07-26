@@ -92,7 +92,6 @@ const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
       <Container>
         <Title>SERVIÇOS</Title>
         <SubTitle>Transformando ideias em realidade digital</SubTitle>
-        
           <Boxes>
             <Box>
               <TopBox>
@@ -135,7 +134,7 @@ const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
           </Boxes>
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default Service;
+export default Service
