@@ -437,7 +437,6 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
                   </Certificade>
                 </CerticadeContainer>
               </Section>
-
           </Content>
         </Right>
       </Container>
