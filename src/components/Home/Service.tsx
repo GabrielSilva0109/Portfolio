@@ -20,7 +20,6 @@ const Container = styled.div`
   margin-top: 120px ;
   margin: 0;
   padding: 0;
-
 `
 
 const Title = styled.h1`
