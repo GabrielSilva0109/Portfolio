@@ -40,7 +40,6 @@ const Experience: React.FC = () => {
     return (
         <Container>
             <Title>Experience</Title>
-            
         </Container>
     );
 };
