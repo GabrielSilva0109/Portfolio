@@ -447,7 +447,7 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
             <CloseButton onClick={closeModal}>×</CloseButton>
             <ModalImage src={currentImage} alt="Certificado" />
           </ModalContent>
-          
+            
         </ModalOverlay>
       )}
 
