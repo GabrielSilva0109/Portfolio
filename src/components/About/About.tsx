@@ -327,7 +327,6 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
       <Container>
         <Left>
           <Title>Fullstack Developer</Title>
-
           <Text>
               Olá! Sou Desenvolvedor de Software Fullstack, habilidoso em serviços de cloud da AWS, APIs Backend,
               além de criar interfaces intuitivas e assíncronas para o usuário. Também sou aluno de Análise e 
