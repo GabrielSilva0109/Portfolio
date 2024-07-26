@@ -65,7 +65,6 @@ const Tabs = styled.div`
   align-items: self-end;
   width: 100%;
   height: 70px;
-  
 `
 
 const Tab = styled.button<{ active: boolean }>`
@@ -234,7 +233,6 @@ const Curso =styled.a`
     -webkit-background-clip: text;
     color: transparent;
   }
-  
 `
 
 const ModalOverlay = styled.div`
