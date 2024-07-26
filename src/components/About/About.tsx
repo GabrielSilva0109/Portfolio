@@ -65,7 +65,6 @@ const Tabs = styled.div`
   align-items: self-end;
   width: 100%;
   height: 70px;
-  
 `
 
 const Tab = styled.button<{ active: boolean }>`
@@ -234,7 +233,6 @@ const Curso =styled.a`
     -webkit-background-clip: text;
     color: transparent;
   }
-  
 `
 
 const ModalOverlay = styled.div`
@@ -304,7 +302,6 @@ const skillsData = [
   { name: 'Spring', percentage: 70 },
 ]
 
-
 const titles = ['Programador', 'Desenvolvedor', 'Estudante']
 
 const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
@@ -327,7 +324,6 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
       <Container>
         <Left>
           <Title>Fullstack Developer</Title>
-
           <Text>
               Olá! Sou Desenvolvedor de Software Fullstack, habilidoso em serviços de cloud da AWS, APIs Backend,
               além de criar interfaces intuitivas e assíncronas para o usuário. Também sou aluno de Análise e 
@@ -437,7 +433,6 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
                   </Certificade>
                 </CerticadeContainer>
               </Section>
-
           </Content>
         </Right>
       </Container>
@@ -449,7 +444,6 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
           </ModalContent>
         </ModalOverlay>
       )}
-
       {/* <Experience /> */}
     </div>
   )
