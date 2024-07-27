@@ -6,8 +6,8 @@ import back from '../../IMG/iconsBack.png'
 import db from '../../IMG/iconsDB.png'
 
 interface HomeProps {
-  toggleTheme: () => void;
-  theme: string; 
+  toggleTheme: () => void
+  theme: string
 }
 
 const Container = styled.div`
