@@ -118,7 +118,7 @@ const ToLink = styled(Link)`
 const Home: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
   return (
     <>
-      <Header toggleTheme={toggleTheme} theme={theme} />
+      <Header toggleTheme={toggleTheme} theme={theme}/>
       <Container>
         <LeftContainer>
           <Skills>TYPESCRIPT | REACT | FIREBASE</Skills>
@@ -141,7 +141,7 @@ const Home: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
       </Container>
       <Service toggleTheme={function (): void {
         throw new Error('Function not implemented.')
-      } } theme={''} />
+      }} theme={''}/>
     </>
   )
 }
