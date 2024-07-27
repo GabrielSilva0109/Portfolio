@@ -141,7 +141,7 @@ const Home: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
       </Container>
       <Service toggleTheme={function (): void {
         throw new Error('Function not implemented.')
-      } } theme={''}/>
+      }} theme={''}/>
     </>
   )
 }
