@@ -94,7 +94,6 @@ const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
         <SubTitle>Transformando ideias em realidade digital</SubTitle>
           <Boxes>
             <Box>
-              
               <TopBox>
                 <Icon src={web}/>
               </TopBox>
