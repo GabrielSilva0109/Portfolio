@@ -6,8 +6,8 @@ import back from '../../IMG/iconsBack.png'
 import db from '../../IMG/iconsDB.png'
 
 interface HomeProps {
-  toggleTheme: () => void;
-  theme: string; 
+  toggleTheme: () => void
+  theme: string
 }
 
 const Container = styled.div`
@@ -94,6 +94,7 @@ const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
         <SubTitle>Transformando ideias em realidade digital</SubTitle>
           <Boxes>
             <Box>
+              
               <TopBox>
                 <Icon src={web}/>
               </TopBox>

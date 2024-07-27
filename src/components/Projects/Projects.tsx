@@ -39,7 +39,6 @@ const Container = styled.div`
     margin-bottom: 50px;
     flex-direction: column;
     gap: 20px;
-
     @media(max-width: 768px) {
     }
 `
