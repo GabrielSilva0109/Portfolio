@@ -132,11 +132,7 @@ const Home: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
             <BtnCV href="./GabrielSilva.pdf" download>
               Curriculo
             </BtnCV>
-            */}
-
-
-
-            
+            */} 
           </Btns>
         </LeftContainer>
         <RightContainer>
