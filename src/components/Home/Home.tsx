@@ -133,6 +133,8 @@ const Home: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
               Curriculo
             </BtnCV>
             */}
+
+            
           </Btns>
         </LeftContainer>
         <RightContainer>
