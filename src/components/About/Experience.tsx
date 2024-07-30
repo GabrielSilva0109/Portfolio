@@ -81,6 +81,20 @@ const Left = styled.div`
   width: 40%
 `
 
+const Ball = styled.div`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3584A7;
+`
+
+const Line = styled.div`
+  height: 100px;
+  width: 2px;
+  background-color: #3584A7;
+`
+
+
 
 const Experience: React.FC = () => {
     return (
