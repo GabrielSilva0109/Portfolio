@@ -113,6 +113,18 @@ const Experience: React.FC = () => {
               </Left>
               
             </Content>
+            <Content>
+              <Right>
+                <Title>Desenvolvedor Fullstack</Title>
+                <Skill>Typescript | React | Firebase</Skill>
+              </Right>
+
+              <Left>
+                <Ball></Ball>
+                <Line></Line>
+              </Left>
+              
+            </Content>
         </Container>
     )
 }
