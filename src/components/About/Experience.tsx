@@ -23,8 +23,6 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   padding: 15px;
-  gap: 40px;
-  margin-top: 120px ;
   margin: 0;
   padding: 0;
 `
@@ -96,7 +94,8 @@ const Experience: React.FC = () => {
               </Right>
 
               <Left>
-
+                <Ball></Ball>
+                <Line></Line>
               </Left>
               
             </Content>
