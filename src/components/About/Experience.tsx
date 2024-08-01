@@ -112,7 +112,7 @@ const Experience: React.FC = () => {
         <Content>
           <Right>
             <Title>Desenvolvedor Fullstack</Title>
-            <Skill>Java | Spring | React</Skill>
+            <Skill>Java | Spring | React | AWS</Skill>
           </Right>
           <Left>
             <Ball />
