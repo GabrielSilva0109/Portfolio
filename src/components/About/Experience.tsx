@@ -106,6 +106,7 @@ const Experience: React.FC = () => {
                 <Title>Desenvolvedor Fullstack</Title>
                 <Skill>Typescript | React | Firebase</Skill>
               </Right>
+              
 
               <Left>
                 <Ball></Ball>
