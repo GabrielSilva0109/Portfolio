@@ -111,7 +111,7 @@ const Experience: React.FC = () => {
           </Left>          
         </Content>
         <Content>
-          
+
           <Right>
             <Title>Desenvolvedor Fullstack</Title>
             <Skill>Java | Spring | React | AWS</Skill>
@@ -123,6 +123,7 @@ const Experience: React.FC = () => {
       </TimelineContainer>
     </Container>
   )
+  
 }
 
 export default Experience
