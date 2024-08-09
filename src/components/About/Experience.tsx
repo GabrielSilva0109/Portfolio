@@ -108,11 +108,10 @@ const Experience: React.FC = () => {
           </Right>
           <Left>
             <Ball />
-          </Left>
-          
-          
+          </Left>          
         </Content>
         <Content>
+          
           <Right>
             <Title>Desenvolvedor Fullstack</Title>
             <Skill>Java | Spring | React | AWS</Skill>
