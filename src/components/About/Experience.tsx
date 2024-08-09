@@ -123,7 +123,7 @@ const Experience: React.FC = () => {
       </TimelineContainer>
     </Container>
   )
-  
+
 }
 
 export default Experience
