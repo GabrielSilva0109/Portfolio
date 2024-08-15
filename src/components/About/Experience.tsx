@@ -108,7 +108,9 @@ const Experience: React.FC = () => {
           </Right>
           <Left>
             <Ball />
-          </Left>        
+          </Left>    
+              
+
 
 
 
