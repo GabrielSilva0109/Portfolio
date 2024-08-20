@@ -112,6 +112,8 @@ const Experience: React.FC = () => {
         </Content>
         <Content>
 
+
+
           
           <Right>
             <Title>Desenvolvedor Fullstack</Title>
