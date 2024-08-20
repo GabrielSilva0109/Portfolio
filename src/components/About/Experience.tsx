@@ -94,7 +94,6 @@ const Ball = styled.div`
   transform: translateX(-50%);
 `
 
-
 const Experience: React.FC = () => {
   return (
     <Container>
@@ -108,8 +107,7 @@ const Experience: React.FC = () => {
           </Right>
           <Left>
             <Ball />
-          </Left>         
-
+          </Left>        
         </Content>
         <Content>          
           <Right>
