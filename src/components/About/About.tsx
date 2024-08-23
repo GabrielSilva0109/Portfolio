@@ -333,7 +333,6 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
               de software.
           </Text>
         </Left>
-
         <Right>
           <Tabs>
             <Tab active={activeTab === 'skills'} onClick={() => setActiveTab('skills')}>
