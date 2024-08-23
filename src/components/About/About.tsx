@@ -317,7 +317,7 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
   function closeModal(): void {
     setIsOpen(false);
   }
-
+  
   return (
     <>
       <Header toggleTheme={toggleTheme} theme={theme} />
@@ -333,7 +333,6 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
               de software.
           </Text>
         </Left>
-
         <Right>
           <Tabs>
             <Tab active={activeTab === 'skills'} onClick={() => setActiveTab('skills')}>
