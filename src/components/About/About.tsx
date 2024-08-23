@@ -321,7 +321,6 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
   return (
     <div>
 
-
       <Header toggleTheme={toggleTheme} theme={theme} />
       <Container>
         <Left>
