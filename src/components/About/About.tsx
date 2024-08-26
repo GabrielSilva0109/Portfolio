@@ -345,8 +345,6 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
               Certificados
             </Tab>
           </Tabs>
-
-
           <Content>
               <Section visible={activeTab === 'skills'}>
                 <SkillsContainer>
