@@ -320,7 +320,7 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
   
   return (
     <>
-    
+
       <Header toggleTheme={toggleTheme} theme={theme} />
       <Container>
         <Left>
@@ -346,6 +346,7 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
               Certificados
             </Tab>
           </Tabs>
+
 
           <Content>
               <Section visible={activeTab === 'skills'}>
