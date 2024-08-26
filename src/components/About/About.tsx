@@ -346,6 +346,7 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
             </Tab>
           </Tabs>
 
+
           <Content>
               <Section visible={activeTab === 'skills'}>
                 <SkillsContainer>
