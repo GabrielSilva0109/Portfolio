@@ -301,7 +301,6 @@ const skillsData = [
   { name: 'AWS', percentage: 60 },
   { name: 'Spring', percentage: 70 },
 ]
-
 const titles = ['Programador', 'Desenvolvedor', 'Estudante']
 
 const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
