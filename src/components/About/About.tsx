@@ -318,7 +318,14 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
     setIsOpen(false);
   }
 
-  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * titles.length);
+      document.title = titles[randomIndex];
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
