@@ -318,7 +318,6 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
     setIsOpen(false);
   }
 
-
   return (
     <>
       <Header toggleTheme={toggleTheme} theme={theme} />
