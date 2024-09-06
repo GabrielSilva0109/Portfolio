@@ -318,7 +318,7 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
     setIsOpen(false);
   }
 
-  
+
 
   return (
     <>
