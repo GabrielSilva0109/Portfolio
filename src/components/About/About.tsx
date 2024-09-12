@@ -260,7 +260,6 @@ const ModalContent = styled.div`
 `
 
 
-
 const ModalImage = styled.img`
   max-width: 100%;
   max-height: 80vh;
