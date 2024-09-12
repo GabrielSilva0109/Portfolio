@@ -258,6 +258,7 @@ const ModalContent = styled.div`
   flex-direction: column;
   align-items: center;
 `
+
 const ModalImage = styled.img`
   max-width: 100%;
   max-height: 80vh;
