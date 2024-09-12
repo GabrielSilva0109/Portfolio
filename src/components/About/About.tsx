@@ -259,6 +259,8 @@ const ModalContent = styled.div`
   align-items: center;
 `
 
+
+
 const ModalImage = styled.img`
   max-width: 100%;
   max-height: 80vh;
