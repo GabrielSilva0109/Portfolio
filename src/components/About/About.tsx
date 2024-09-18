@@ -290,6 +290,7 @@ const CloseButton = styled.button`
   }
 `
 
+
 const skillsData = [
   { name: 'Java', percentage: 80 },
   { name: 'JavaScript', percentage: 90 },
