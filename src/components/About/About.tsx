@@ -264,7 +264,6 @@ const ModalImage = styled.img`
   max-height: 80vh;
 `
 
-
 const CloseButton = styled.button`
   background: red;
   width: 18px;
