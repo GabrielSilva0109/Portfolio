@@ -222,7 +222,6 @@ const Certificade = styled.div`
 
 
 
-
 const Curso =styled.a`
   text-decoration: none;
   font-size: 1.1rem;
