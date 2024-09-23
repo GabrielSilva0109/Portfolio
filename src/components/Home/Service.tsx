@@ -147,6 +147,18 @@ const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
               </List>
             </Box>
 
+            <Box>
+              <TopBox>
+                <Icon src={ux}/>
+              </TopBox>
+              <Title>Design de Interfaces</Title>
+              <Text>Desenvolvo interfaces únicas e funcionais, priorizando a experiência do usuário e a adaptação a diferentes dispositivos.</Text>
+              <List>
+                <ItemList>Criação de wireframes e protótipos interativos</ItemList>
+                <ItemList>Design responsivo para todos os dispositivos</ItemList>
+                <ItemList>Integração de práticas de UI e UX Design</ItemList>
+              </List>
+            </Box>
 
           </Boxes>
       </Container>
