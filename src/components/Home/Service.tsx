@@ -6,6 +6,7 @@ import back from '../../IMG/iconsBack.png'
 import db from '../../IMG/iconsDB.png'
 import cloud from '../../IMG/iconCloud.png'
 import ux from '../../IMG/iconUx.png'
+import ia from '../../IMG/iconIa.png'
 
 interface HomeProps {
   toggleTheme: () => void
@@ -44,13 +45,15 @@ const SubTitle = styled.h3`
 `
 
 const Boxes = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-  @media(max-width: 768px){
-    flex-direction: column;
+  @media(max-width: 1000px){
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+    @media(max-width: 1000px){
+    grid-template-columns: 1fr;
   }
 `
 
@@ -152,14 +155,25 @@ const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
                 <Icon src={ux}/>
               </TopBox>
               <Title>Design de Interfaces</Title>
-              <Text>Desenvolvo interfaces únicas e funcionais, priorizando a experiência do usuário e a adaptação a diferentes dispositivos.</Text>
+              <Text>Desenvolvimento de interfaces de usuário intuitivas e atraentes utilizando ferramentas como Figma, Adobe XD e Sketch.</Text>
               <List>
-                <ItemList>Criação de wireframes e protótipos interativos</ItemList>
-                <ItemList>Design responsivo para todos os dispositivos</ItemList>
-                <ItemList>Integração de práticas de UI e UX Design</ItemList>
+                <ItemList>Wireframes e prototipação</ItemList>
+                <ItemList>Design responsivo</ItemList>
+                <ItemList>UI e UX Design</ItemList>
               </List>
             </Box>
-
+            <Box>
+              <TopBox>
+                <Icon src={ia} />
+              </TopBox>
+              <Title>Inteligência Artificial</Title>
+              <Text>Meu proximo foco seria estudar IA com projetos que foquem em soluções que melhoram a eficiência e a tomada de decisões.</Text>
+              <List>
+                <ItemList>Automação de processos para aumentar a produtividade</ItemList>
+                <ItemList>Desenvolvimento de modelos preditivos para análise de dados</ItemList>
+                <ItemList>Criação de assistentes virtuais inteligentes</ItemList>
+              </List>
+            </Box>
           </Boxes>
       </Container>
     </div>
