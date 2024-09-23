@@ -94,6 +94,17 @@ const Ball = styled.div`
   transform: translateX(-50%);
 `
 
+const Ul = styled.ul`
+  list-style: none;
+  padding: 0;
+`
+
+const Li = styled.li`
+  color: gray;
+  font-weight: bold;
+  text-align: justify;
+`
+
 const Experience: React.FC = () => {
   return (
     <Container>
@@ -104,19 +115,33 @@ const Experience: React.FC = () => {
           <Right>
             <Title>Desenvolvedor Fullstack</Title>
             <Skill>Typescript | React | Firebase</Skill>
+            <Ul>
+              <Li>Implementação de soluções backend em TypeScript com Firebase para autenticação,
+                 dados e funções serverless, garantindo eficiência.</Li>
+              <Li>Desenvolvimento de componentes funcionais em TypeScript e React, usando Hooks
+                 Avançados e integrando APIs REST e Firebase para otimizar performance</Li>
+              <Li>Estilização de projetos com Sass, CSS e Tailwind, aplicando Código Limpo em TypeScript e React.</Li>
+              <Li>Gerenciamento de projetos com Jira, MeisterTask e design no Figma, integrando TypeScript, React 
+                e Firebase para uma experiência de usuário coesa.</Li>
+            </Ul>
           </Right>
-          <Left>
+          {/* <Left>
             <Ball />
-          </Left>        
+          </Left>         */}
         </Content>
         <Content>          
           <Right>
             <Title>Desenvolvedor Fullstack</Title>
             <Skill>Java | Spring | React | AWS</Skill>
+            <Ul>
+              <Li>Desenvolvimento de aplicações web com Java, Spring, React e AWS, garantindo escalabilidade e segurança.</Li>
+              <Li>Implementação de APIs RESTful com Java e Spring.</Li>
+              <Li>Manutenção de banco de dados MySQL.</Li>
+            </Ul>
           </Right>
-          <Left>
+          {/* <Left>
             <Ball />
-          </Left>
+          </Left> */}
         </Content>
       </TimelineContainer>
     </Container>
