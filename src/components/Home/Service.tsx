@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import web from '../../IMG/iconsWeb.png'
 import back from '../../IMG/iconsBack.png'
 import db from '../../IMG/iconsDB.png'
+import cloud from '../../IMG/iconCloud.png'
+import ux from '../../IMG/iconUx.png'
 
 interface HomeProps {
   toggleTheme: () => void
@@ -131,6 +133,21 @@ const Service: React.FC<HomeProps> = ({ toggleTheme, theme }) => {
                 <ItemList>Otimização de consultas e índices</ItemList>
               </List>
             </Box>
+
+            <Box>
+              <TopBox>
+                <Icon src={cloud}/>
+              </TopBox>
+              <Title>Serviços em Nuvem</Title>
+              <Text>Implementação e gerenciamento de infraestruturas em nuvem utilizando Firebase e AWS para hospedar, escalar e otimizar aplicações.</Text>
+              <List>
+                <ItemList>Deploy de aplicações web com Firebase Hosting</ItemList>
+                <ItemList>Gerenciamento de bancos de dados com Firebase Firestore.</ItemList>
+                <ItemList>Serviços escaláveis com AWS (EC2, S3, RDS)</ItemList>
+              </List>
+            </Box>
+
+
           </Boxes>
       </Container>
     </div>
