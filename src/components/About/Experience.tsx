@@ -100,7 +100,6 @@ const Ul = styled.ul`
 `
 
 
-
 const Li = styled.li`
   color: gray;
   font-weight: bold;
