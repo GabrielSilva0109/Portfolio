@@ -99,11 +99,13 @@ const Ul = styled.ul`
   padding: 0;
 `
 
+
 const Li = styled.li`
   color: gray;
   font-weight: bold;
   text-align: justify;
 `
+
 
 const Experience: React.FC = () => {
   return (
