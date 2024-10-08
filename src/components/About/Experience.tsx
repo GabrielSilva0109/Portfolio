@@ -96,6 +96,7 @@ const Ball = styled.div`
 
 const Ul = styled.ul`
   list-style: none;
+  
   padding: 0;
 
 `
