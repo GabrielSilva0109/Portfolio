@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header'
 import styled from 'styled-components'
 
-//Certificados
 import softEnginer from '../../IMG/certificates/softEnginer.png'
 import restApi from '../../IMG/certificates/RestApi.png'
 import sql from '../../IMG/certificates/sql.png'
