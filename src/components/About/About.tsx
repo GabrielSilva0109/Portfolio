@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header'
 import styled from 'styled-components'
 
-//Certificados
 import softEnginer from '../../IMG/certificates/softEnginer.png'
 import restApi from '../../IMG/certificates/RestApi.png'
 import sql from '../../IMG/certificates/sql.png'
@@ -220,7 +219,6 @@ const Certificade = styled.div`
   width: 100%;
 `
 
-
 const Curso =styled.a`
   text-decoration: none;
   font-size: 1.1rem;
@@ -327,7 +325,7 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
 
     return () => clearInterval(interval);
   }, []);
-
+  
   return (
     <>
       <Header toggleTheme={toggleTheme} theme={theme} />
