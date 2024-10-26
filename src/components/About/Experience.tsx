@@ -105,7 +105,7 @@ const Li = styled.li`
   font-weight: bold;
   text-align: justify;
 
-  
+
 `
 
 const Experience: React.FC = () => {
