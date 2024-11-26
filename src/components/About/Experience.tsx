@@ -111,7 +111,7 @@ const Experience: React.FC = () => {
     <Container>
       <SubTitle>Experiência</SubTitle>
       <TimelineContainer>
-        <Line />
+        
         <Content>
           <Right>
             <Title>Desenvolvedor Fullstack</Title>
