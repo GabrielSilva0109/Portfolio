@@ -346,9 +346,9 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
             <Tab active={activeTab === 'skills'} onClick={() => setActiveTab('skills')}>
               Skills
             </Tab>
-            <Tab active={activeTab === 'experience'} onClick={() => setActiveTab('experience')}>
+            {/* <Tab active={activeTab === 'experience'} onClick={() => setActiveTab('experience')}>
               Experiência
-            </Tab>
+            </Tab> */}
             <Tab active={activeTab === 'certificados'} onClick={() => setActiveTab('certificados')}>
               Certificados
             </Tab>
@@ -367,7 +367,7 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
                 </SkillsContainer>
               </Section>
 
-              <Section visible={activeTab === 'experience'}>
+              {/* <Section visible={activeTab === 'experience'}>
                 <Boxes>
                 <Box>
                   <SubTitle>Boom Prospect</SubTitle>
@@ -394,7 +394,7 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
                   <Cargo>Menor Aprendiz | 03/2016 - 05/2017</Cargo>
                  </Box>
                 </Boxes>
-              </Section>
+              </Section> */}
 
               <Section visible={activeTab === 'certificados'}>
                 <CerticadeContainer>
