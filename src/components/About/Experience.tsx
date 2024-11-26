@@ -94,7 +94,6 @@ const Ball = styled.div`
   transform: translateX(-50%);
 `
 
-
 const Ul = styled.ul`
   list-style: none;
   padding: 0;
