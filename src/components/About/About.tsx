@@ -302,6 +302,7 @@ const skillsData = [
 ]
 
 
+
 const titles = ['Programador', 'Desenvolvedor', 'Estudante']
 
 const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
