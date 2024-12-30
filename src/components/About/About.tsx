@@ -325,8 +325,6 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
 
     return () => clearInterval(interval);
   }, []);
-
-  
   
 
 
