@@ -178,13 +178,15 @@ const ProgressBarContainer = styled.div`
   background: #b7b7b7;
   border-radius: 5px;
   overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 `
 
 const ProgressBar = styled.div<{ percentage: number }>`
   width: ${(props) => props.percentage}%;
-  background: linear-gradient(90deg, rgba(10, 2, 247, 1) 0%, rgba(53, 132, 167, 1) 51%, rgba(48, 210, 190, 1) 100%);
+  background: linear-gradient(90deg, rgba(10, 2, 247, 1) 0%, rgb(255 255 255) 51%, rgb(255 255 255) 100%);
   height: 12px;
   transition: width 1s ease-in-out;
+
 `
 
 const Boxes = styled.div`
@@ -325,9 +327,6 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
 
     return () => clearInterval(interval);
   }, []);
-  
-  
-
 
   return (
     <>
@@ -336,10 +335,9 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
         <Left>
           <Title>Fullstack Developer</Title>
           <Text>
-              Olá! Sou Desenvolvedor de Software Fullstack, habilidoso em serviços de cloud da AWS, APIs Backend,
-              além de criar interfaces intuitivas e assíncronas para o usuário. Também sou aluno de Análise e 
-              Desenvolvimento de Sistemas no 5º/5º semestre, e formado em Marketing.<br></br> <br></br> Mantenho-me atualizado com
-              as tendências tecnológicas e sou fascinado por transformar linhas de código em soluções práticas. 
+              Olá! Sou Desenvolvedor de Software Fullstack, habilidoso em serviços de cloud da Firebase e AWS, APIs Backend,
+              além de criar interfaces intuitivas e assíncronas para o usuário. Formado em Analise e desenvolvimento de sistemas, e formado em Marketing.<br></br> <br></br>Ja tive a oportunidade de trabalhar em diversos projetos, 
+              e atualmente estou trabalhando em uma grande Starup de Florianópolis SC, no ramo de Prospecção de vendas, com parceria de uma das maiores empresas do ramo automomotivo. 
               Estou ansioso para continuar aprendendo e explorando novas possibilidades no vasto universo do desenvolvimento
               de software.
           </Text>
