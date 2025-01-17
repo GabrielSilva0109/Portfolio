@@ -325,9 +325,6 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
 
     return () => clearInterval(interval);
   }, []);
-  
-  
-
 
   return (
     <>
@@ -336,10 +333,9 @@ const About: React.FC<AboutProps> = ({ toggleTheme, theme }) => {
         <Left>
           <Title>Fullstack Developer</Title>
           <Text>
-              Olá! Sou Desenvolvedor de Software Fullstack, habilidoso em serviços de cloud da AWS, APIs Backend,
-              além de criar interfaces intuitivas e assíncronas para o usuário. Também sou aluno de Análise e 
-              Desenvolvimento de Sistemas no 5º/5º semestre, e formado em Marketing.<br></br> <br></br> Mantenho-me atualizado com
-              as tendências tecnológicas e sou fascinado por transformar linhas de código em soluções práticas. 
+              Olá! Sou Desenvolvedor de Software Fullstack, habilidoso em serviços de cloud da Firebase e AWS, APIs Backend,
+              além de criar interfaces intuitivas e assíncronas para o usuário. Formado em Analise e desenvolvimento de sistemas, e formado em Marketing.<br></br> <br></br>Ja tive a oportunidade de trabalhar em diversos projetos, 
+              e atualmente estou trabalhando em uma grande Starup de Florianópolis SC, no ramo de Prospecção de vendas, com parceria de uma das maiores empresas do ramo automomotivo. 
               Estou ansioso para continuar aprendendo e explorando novas possibilidades no vasto universo do desenvolvimento
               de software.
           </Text>
