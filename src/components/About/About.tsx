@@ -178,13 +178,15 @@ const ProgressBarContainer = styled.div`
   background: #b7b7b7;
   border-radius: 5px;
   overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 `
 
 const ProgressBar = styled.div<{ percentage: number }>`
   width: ${(props) => props.percentage}%;
-  background: linear-gradient(90deg, rgba(10, 2, 247, 1) 0%, rgba(53, 132, 167, 1) 51%, rgba(48, 210, 190, 1) 100%);
+  background: linear-gradient(90deg, rgba(10, 2, 247, 1) 0%, rgb(255 255 255) 51%, rgb(255 255 255) 100%);
   height: 12px;
   transition: width 1s ease-in-out;
+
 `
 
 const Boxes = styled.div`
